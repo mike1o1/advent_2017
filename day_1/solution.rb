@@ -6,37 +6,23 @@ class Day1
   end
 
   def problem_1
-    calculate_sum
+    calculate_sum(1)
   end
 
   def problem_2
-    calculate_second_captcha
+    step = input.length / 2
+
+    calculate_sum(step)
   end
+
+  private
 
   def process_input(input)
     input.split("\n").first
   end
 
-  def calculate_sum
+  def calculate_sum(step)
     sum = 0
-    input.each_char.with_index do |value, index|
-      next_value = input[index + 1]
-
-      if index == input.length - 1
-        next_value = input.each_char.first
-      end
-
-      if value == next_value
-        sum += value.to_i
-      end
-    end
-
-    sum
-  end
-
-  def calculate_second_captcha
-    sum = 0
-    step = input.length / 2
 
     input.each_char.with_index do |value, index|
       next_position = index + step
