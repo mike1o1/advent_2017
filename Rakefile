@@ -26,6 +26,8 @@ task :day, [:day] do |t, args|
 
   puts
 
+  solution = Object.const_get("Day#{day}").new(input)
+
   puts "Problem 2"
   puts solution.problem_2
 end

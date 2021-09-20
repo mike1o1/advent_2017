@@ -27,12 +27,10 @@ class Day1
     input.each_char.with_index do |value, index|
       next_position = index + step
       if next_position > input.length - 1
-        next_position = next_position - (input.length)
+        next_position -= input.length
       end
 
       next_value = input[next_position]
-
-      # puts "Index: #{index}: Comparing #{value} to #{next_value}. Next position: #{next_position}"
 
       if value == next_value
         sum += value.to_i

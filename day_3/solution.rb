@@ -36,7 +36,7 @@ class Day3
     input.times do |i|
       value = [x - 1, x, x + 1]
         .product([y - 1, y, y + 1])
-        .map { |x, y| grid[y][x]}
+        .map { |x, y| grid[y][x] }
         .compact
         .inject(&:+)
 
