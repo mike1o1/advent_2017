@@ -1,6 +1,6 @@
 require "benchmark"
 
-SOLVED_DAYS = (1..4)
+SOLVED_DAYS = (1..6)
 
 SOLVED_DAYS.each do |day|
   require_relative "day_#{day}/solution"
